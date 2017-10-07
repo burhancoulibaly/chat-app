@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chat-App</title>
+    <script type="text/javascript" src="../../jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/app.css">
+  </head>
+  <body>
+    <div id="userFormArea" class="row container userFormArea">
+      <div class="col-md-12">
+        <form class="userForm">
+          <div class="form-group user container">
+            <label>Enter Username</label>
+            <input type="text" class="form-control" value='' id="username">
+            <button type="button" onclick="userFormSubmit()" class="btn btn-primary login" name="button">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id=chat-app class="display-none">
+      <div class="jumbotron page-head">
+        <h1>Chat-App</h1>
+      </div>
+      <div class="well well-lg chat-box" id="chat-box">
+        <h1>Chat-Box</h1>
+      </div>
+      <div class="well user-box" id="user-box">
+        <div class="user-box-header">
+          Users Online
+        </div>
+        <div class="users" id="users">
+          <h1>hello</h1>
+        </div>
+      </div>
+      <div class="well type-box">
+        <textarea id="message-box" placeholder="Enter your message here: "></textarea>
+        <button type="button" name="button" onclick="textAreaSubmit()" class="btn btn-primary type-btn">Send</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../js/app.js"></script>
+  </body>
+</html>
