@@ -1,20 +1,49 @@
-.chat-box{
-  height: 69.5%;
+html, body{
+  height: 100%;
+}
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+.chat-app{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.chat{
+  display: flex;
+  height: 100%;
+}
+.chat-data{
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  height: 100%;
   width: 70%;
-  display:inline-block;
+}
+.chat-box{
   margin: 0;
   border-radius: 0;
-  overflow-y: auto;
+  flex: 20 1 auto;
+}
+.type-box{
+  display: flex;
+  flex: 1 1 auto;
+}
+#message-box{
+  width: 80%;
+  height: 100%;
+}
+.type-btn{
+  border-radius: 0;
+  width: 20%;
 }
 .page-head{
   margin-bottom: 0px;
 }
 .user-box{
   background-color: #e0e0e0;
-  width:30%;
-  height: 79.5%;
-  float: right;
-  display:inline-block;
+  width: 30%;
+  height: 100%;
   margin: 0;
   border-radius: 0;
   padding: 0;
@@ -30,40 +59,28 @@ body{
   position: relative;
 }
 #username{
-  width:60vh;
+  width: 100%;
   display: inline-block;
 }
 .display-none{
   display: none;
 }
 .user{
-  width: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+.form-container{
+  width: 80%;
 }
 .login{
-  right: 70px;
-  display: inline-block;
-  float: right;
+  height: 50%;
+  width: 17%;
+  bottom: -50%;
+  margin-left: .5rem;
   position: relative;
-}
-.chat-app{
-  height: 100%;
-}
-.new-user{
-  color: green;
-}
-.type-box{
-  background-color: #efefef;
-  height: 10%;
-  width: 70%;
-  border-radius: 0;
-  padding: 0;
-}
-.type-btn{
-  float: right;
-  position: relative;
-  padding: 20px;
-  top: 16px;
-  right: 16px;
 }
 .user-box-header{
   height:6%;
@@ -71,12 +88,4 @@ body{
   background-color: #f2f2f2;
   text-align: center;
   padding: 12.5px;
-}
-html{
-  height: 100%;
-}
-#message-box{
-  width: 84%;
-  height: 100%;
-  display:inline-block;
 }

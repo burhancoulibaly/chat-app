@@ -4,11 +4,12 @@
   "description": "chat application",
   "main": "index.js",
   "dependencies": {
+    "boostrap": "^2.0.0",
     "bootstrap": "*",
-    "jquery": "*",
+    "express": "*",
+    "jquery": "^3.5.1",
     "sequelize": "*",
-    "socket.io": "^1.7.3",
-    "express": "*"
+    "socket.io": "^2.3.0"
   },
   "scripts": {
     "start": " node ./backend/server.js",
