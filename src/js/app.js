@@ -10,7 +10,6 @@ function textAreaSubmit(){
 }
 
 $(".userForm").submit(function(e) {
-  console.log("submitting")
   e.preventDefault();
 
   $username = $('#username').val();
@@ -26,7 +25,6 @@ $(".userForm").submit(function(e) {
 });
 
 function submitForm(){
-  console.log("submitting form")
   $(".userForm").submit()
 }
 
