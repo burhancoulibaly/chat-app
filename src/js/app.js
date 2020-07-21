@@ -24,6 +24,23 @@ $(".userForm").submit(function(e) {
   }
 });
 
+submit(){
+  $(".userForm").submit(function(e) {
+  e.preventDefault();
+
+  $username = $('#username').val();
+  if($username != ''){
+    console.log($username);
+    socket.emit('new user', $username, (data)=>{
+      $(".userFormArea").addClass('display-none');
+      $("#chat-app").removeClass('display-none');
+      $("#chat-app").addClass('chat-app');
+      $('.username').val('');
+    })
+  }
+});
+}
+
 socket.on('get users', function(data){
   document.getElementById('user-box').innerHTML = '';
   for(i = 0; i < data.length; i++){
