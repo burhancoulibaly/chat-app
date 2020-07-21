@@ -10,7 +10,8 @@ function textAreaSubmit(){
 }
 
 $(".userForm").submit(function(e) {
-  e.preventDefault();
+  console.log("submitting")
+  //e.preventDefault();
 
   $username = $('#username').val();
   if($username != ''){
@@ -25,6 +26,7 @@ $(".userForm").submit(function(e) {
 });
 
 function submitForm(){
+  console.log("submitting form")
   $(".userForm").submit()
 }
 
