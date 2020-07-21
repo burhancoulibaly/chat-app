@@ -11,7 +11,7 @@ function textAreaSubmit(){
 
 $(".userForm").submit(function(e) {
   console.log("submitting")
-  //e.preventDefault();
+  e.preventDefault();
 
   $username = $('#username').val();
   if($username != ''){
