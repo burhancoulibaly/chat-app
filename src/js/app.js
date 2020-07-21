@@ -24,21 +24,8 @@ $(".userForm").submit(function(e) {
   }
 });
 
-function submit(){
-  $(".userForm").submit(function(e) {
-    e.preventDefault();
-
-    $username = $('#username').val();
-    if($username != ''){
-      console.log($username);
-      socket.emit('new user', $username, (data)=>{
-        $(".userFormArea").addClass('display-none');
-        $("#chat-app").removeClass('display-none');
-        $("#chat-app").addClass('chat-app');
-        $('.username').val('');
-      })
-    }
-  });
+function submitForm(){
+  $(".userForm").submit()
 }
 
 socket.on('get users', function(data){
