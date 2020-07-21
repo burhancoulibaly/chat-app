@@ -24,21 +24,21 @@ $(".userForm").submit(function(e) {
   }
 });
 
-submit(){
+function submit(){
   $(".userForm").submit(function(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  $username = $('#username').val();
-  if($username != ''){
-    console.log($username);
-    socket.emit('new user', $username, (data)=>{
-      $(".userFormArea").addClass('display-none');
-      $("#chat-app").removeClass('display-none');
-      $("#chat-app").addClass('chat-app');
-      $('.username').val('');
-    })
-  }
-});
+    $username = $('#username').val();
+    if($username != ''){
+      console.log($username);
+      socket.emit('new user', $username, (data)=>{
+        $(".userFormArea").addClass('display-none');
+        $("#chat-app").removeClass('display-none');
+        $("#chat-app").addClass('chat-app');
+        $('.username').val('');
+      })
+    }
+  });
 }
 
 socket.on('get users', function(data){
